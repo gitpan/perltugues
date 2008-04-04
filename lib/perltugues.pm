@@ -14,32 +14,83 @@ perltugues - pragma para programar usando portugues estruturado
 
 =head1 SYNOPSIS
 
-use perltugues;
+    use perltugues;
+    
+    inteiro: i, j;
+    texto: k;
+    inteiro: l;
+    
+    para i (de 1 a 100 a cada 5) {
+       escreva i, quebra de linha;
+       k = "lalala";
+       escreva k, quebra de linha;
+       escreva j, quebra de linha;
+    }
+    
+    enquanto(i >= j){
+       escreva 'i e j => ', i, " >= ", j++, quebra de linha;
+    }
+    
+    escreva quebra de linha; 
+    
+    escreva de 0 a 50 a cada 10, quebra de linha;
 
-inteiro: i, j;
-
-texto: k;
-
-inteiro: l;
-
-para i (de 1 a 100 a cada 5) {
-   escreva i, quebra de linha;
-   k = "lalala";
-   escreva k, quebra de linha;
-   escreva j, quebra de linha;
-}
-
-enquanto(i >= j){
-   escreva 'i e j => ', i, " >= ", j++, quebra de linha;
-}
-
-escreva quebra de linha; 
-
-escreva de 0 a 50 a cada 10, quebra de linha;
-
-=head1 AUTHORS
+=head1 AUTHOR
 
 Fernando Correa de Oliveira <fco@cpan.org>
+
+=head1 DESCRIPTION
+
+C<Perltugues> é uma forma fácil de se aprender algoritmo. Com ele vc tem uma "linguagem" (quase) completa em portugues, o que facilita muito a aprendizagem. E a tranzição para o C<perl> é muito simples.
+
+=head2 Variaveis:
+
+Todos os nomes de variaveis em C<perltugues> deve começar com uma letra (/^[a-zA-Z]/)
+
+=head3 Tipos de variaveis
+
+Em C<perltugues> existem 4 tipos de variaveis:
+
+=head4 caracter
+
+=head4 inteiro
+
+=head4 real
+
+=head4 texto
+
+=head3 Declaração de variaveis
+
+Variaveis são declaradas da seguinte forma:
+
+    inteiro: i;
+    inteiro: j;
+
+    inteiro: i, j;
+
+    texto: str;
+
+    caracter: chr1, chr2;
+
+=head2 Estruturas de Iteração:
+
+=head3 para
+
+    para i (de 0 a 10){
+        ...
+    }
+
+=head3 enquanto
+
+    enquanto(i != j){
+        ...
+    }
+
+=head3 ateh que
+
+    ateh que(i == j){
+        ...
+    }
 
 =cut
 
@@ -152,15 +203,15 @@ sub filter {
       }
    }
 };
-=over
-
-=item filter()
-
-metodo new...
-
-=cut
-
-=back
+#=over
+#
+#=item filter()
+#
+#metodo new...
+#
+#=back
+#
+#=cut
 
 42;
 __END__

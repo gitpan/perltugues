@@ -140,8 +140,13 @@ sub filter {
    s#\bat(?:eh?|é)(?:\s+q(?:ue)?)?\b\s*(.*?)\{#until $1\{$/#gm;
    s/\bescreva\b(.*?)(;|$)/print($1);/g;
    s/\bleia\b(?:\s*\(?(.*?)\)?)?\s*;/chomp(my \$_tmp_=<>);\$$1->vale(\$_tmp_);/g;
-   s/\bde\s+(.+?)\s+a\s+(.+?)(?:\s+a\s+cada\s+(.+?))(\s*[])};,])/map({(\$_ * $3) + $1} 0 .. (int($2\/$3) - ($1?1:0)))$4/g;
+   s/\bde\s+(.+?)\s+a\s+(.+?)(?:\s+(?:a|para)\s+cada\s+(.+?))(\s*[])};,])/map({(\$_ * $3) + $1} 0 .. (int($2\/$3) - ($1?1:0)))$4/g;
    s/\bde\s+(.+?)\s+a\s+(.+?)(\s*[])};,])/($1 .. $2)$3/g;
+   s/\bsaia do loop\b/last/g;
+   s/\bproximo\b/next/g;
+   s/\bdenovo\b/redo/g;
+   s/\bva para\b/goto/g;
+   s/\(([^()]*?)\)\s*separado\s+por\s*((["']?).*?\3)(\s*[,;])/join($2, $1)$4/g;
    s#quebra\s+de\s+linha#\$/#g;
    s#fim de texto#"\\0"#g;
 

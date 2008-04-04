@@ -1,3 +1,19 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         perltugues
+--- #YAML:1.0
+name: perltugues
+abstract: pragma para programar usando portugues estruturado
+version: 0.1
+author:
+  - Fernando Correa de Oliveira <fco@cpan.org>
+license: artistic_2
+distribution_type: pragma
+requires:
+  Filter::Simple: 0
+recommends:
+  ExtUtils::Install: 0.3
+  Pod::Text: 0
+  YAML: 0.35
+build_requires:
+  Test: 0
+  Test::More: 0
+urls:
+  license: http://dev.perl.org/licenses/

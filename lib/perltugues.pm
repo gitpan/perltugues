@@ -41,11 +41,11 @@ Fernando Correa de Oliveira <fco@cpan.org>
 
 =head1 DESCRIPTION
 
-C<Perltugues> é uma forma fácil de se aprender algoritmo. Com ele vc tem uma "linguagem" (quase) completa em portugues, o que facilita muito a aprendizagem. E a tranzição para o C<perl> é muito simples.
+C<Perltugues> eh uma forma facil de se aprender algoritmo. Com ele vc tem uma "linguagem" (quase) completa em portugues, o que facilita muito a aprendizagem. E a tranzicao para o C<perl> eh muito simples.
 
 =head2 Variaveis:
 
-Todos os nomes de variaveis em C<perltugues> deve começar com uma letra (/^[a-zA-Z]/)
+Todos os nomes de variaveis em C<perltugues> devem comecar com uma letra (/^[a-zA-Z]/)
 
 =head3 Tipos de variaveis
 
@@ -59,9 +59,9 @@ Em C<perltugues> existem 4 tipos de variaveis:
 
 =head4 texto
 
-=head3 Declaração de variaveis
+=head3 Declaracao de variaveis
 
-Variaveis são declaradas da seguinte forma:
+Variaveis sao declaradas da seguinte forma:
 
     inteiro: i;
     inteiro: j;
@@ -72,7 +72,7 @@ Variaveis são declaradas da seguinte forma:
 
     caracter: chr1, chr2;
 
-=head2 Estruturas de Iteração:
+=head2 Estruturas de Iteracao:
 
 =head3 para
 
@@ -134,7 +134,7 @@ sub filter {
    my @varArray;
    $_ = "use strict;$/" . $_;
    s#\bse\b\s*(.*?)\{#if $1\{$/#gm;
-   s#\ba\s+n[ãa]o\s+ser(?:\s+q(?:ue)?)?\b\s*(.*?)\{#unless $1\{$/#gm;
+   s#\ba\s+n[aa]o\s+ser(?:\s+q(?:ue)?)?\b\s*(.*?)\{#unless $1\{$/#gm;
    s#\bpara\b\s+(\w+)(.*?)\{#for $2\{\$$1->vale(\$_);$/#gm;
    s#\benquanto\b\s*(.*?)\{#while $1\{$/#gm;
    s#\bat(?:eh?|é)(?:\s+q(?:ue)?)?\b\s*(.*?)\{#until $1\{$/#gm;
@@ -154,7 +154,7 @@ sub filter {
    die qq#Variavel "$redef" redefinida!$/# if defined $redef;
 
    my $err_var = (grep{!/^[a-z,A-Z]/} @var)[0];
-   die qq#Nome inválido da variavel "$err_var".$/# if defined $err_var;
+   die qq#Nome invalido da variavel "$err_var".$/# if defined $err_var;
 
    my($t, $v);
    my %tipo = m#(?:^|;)\s*\b($tipo)\s*:\s*([\w, ]+)\s*;#gsmx;
@@ -180,7 +180,7 @@ sub filter {
       die qq#Variavel "$redef" redefinida!$/# if defined $redef;
 
       my $err_var = (grep{!/^[a-z,A-Z]/} @varArray)[0];
-      die qq#Nome inválido da variavel "$err_var".$/# if defined $err_var;
+      die qq#Nome invalido da variavel "$err_var".$/# if defined $err_var;
 
       my($t, $v);
       my %tipo = m#\barray\s+($tipo)\s*:\s*([]\w, []+)\s*;#gxsm;
@@ -196,8 +196,8 @@ sub filter {
                   }split/\s*,\s*/, $_var
        #gexsm;
       for my $var(@varArray){
-         s/([^\$])\b$var\[(.*?)\]\s*=\s*((['"])?.*?\3?)\s*;/$1($2 <= \$#$var?\$$var\[$2]->vale($3):die qq#O array "$var" está sendo acessado numa posição inexistente\$\/#);/g;
-         s/([^\$])\b$var\[(.*?)\]/$1($2 <= \$#$var?\$$var\[$2]:die qq#O array "$var" está sendo acessado numa posição inexistente\$\/#)/g;
+         s/([^\$])\b$var\[(.*?)\]\s*=\s*((['"])?.*?\3?)\s*;/$1($2 <= \$#$var?\$$var\[$2]->vale($3):die qq#O array "$var" esta sendo acessado numa posicao inexistente\$\/#);/g;
+         s/([^\$])\b$var\[(.*?)\]/$1($2 <= \$#$var?\$$var\[$2]:die qq#O array "$var" esta sendo acessado numa posicao inexistente\$\/#)/g;
          s/([^@#])\b$var\b(?!\[.*?\])/$1\@$var/g;
          s/\btamanho\s*\($var\)/\$#$var/g;
       }

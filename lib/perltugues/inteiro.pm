@@ -83,8 +83,8 @@ sub new {
 
 metodo new...
 
-=cut
-
 =back
+
+=cut
 
 

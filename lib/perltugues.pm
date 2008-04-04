@@ -203,15 +203,16 @@ sub filter {
       }
    }
 };
-#=over
-#
-#=item filter()
-#
-#metodo new...
-#
-#=back
-#
-#=cut
+
+=over
+
+=item filter()
+
+metodo new...
+
+=back
+
+=cut
 
 42;
 __END__

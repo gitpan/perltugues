@@ -1,4 +1,12 @@
+=head1 NAME
+
+perltugues::tipo - tipo do pragma pertugues
+
+=cut
+
+
 package perltugues::tipo;
+my $VERSION= 0.1;
 
 use strict;
 
@@ -39,7 +47,6 @@ use overload
                 my $r    = shift;
                 $r->{valor} ** shift;
               };
-
 sub new {
    my $class   = shift;
    my $r;
@@ -55,3 +62,25 @@ sub vale{
    $r->{valor} = $tmp;
 }
 42;
+
+=over
+
+=item vale()
+
+metodo new...
+
+=cut
+
+=back
+
+
+=over
+
+=item new()
+
+metodo new...
+
+=cut
+
+=back
+

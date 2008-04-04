@@ -1,12 +1,18 @@
+=head1 NAME
+
+perltugues - pragma para programar usando portugues estruturado
+
+=cut
+
 package perltugues;
 
 require 5.005_62;
-#use strict;
+use strict;
 use warnings;
 
 BEGIN {
-   $BOPE::AUTHOR  = "Fernando C. de Oliveira <smokemachine [at] cpan [dot] org>";
-   $BOPE::VERSION =  0.0.1;
+   $perltugues::AUTHOR  = "Fernando C. de Oliveira <smokemachine [at] cpan [dot] org>";
+   $perltugues::VERSION =  0.0.1;
 }
 
 our $VERSION = '0.1';
@@ -34,6 +40,7 @@ FILTER_ONLY
 },
   code_no_comments  => \&filter;
 my $tipo = "inteiro|texto|real|caracter";
+
 sub filter {
    my @var;
    my @varArray;
@@ -55,7 +62,7 @@ sub filter {
    my @varB = grep {!/^\s*$/} m#(?:^|;)\s*\b(?:$tipo)\s*:\s*([\w, ]+)\s*;#gsm;
    push(@var, split /\s*,\s*/, join ",", @varB);
 
-   my $redef = (grep{$v=$_; 1 < grep {$v eq $_} @var} @var)[0];
+   my $redef = (grep{my $v=$_; 1 < grep {$v eq $_} @var} @var)[0];
    die qq#Variavel "$redef" redefinida!$/# if defined $redef;
 
    my $err_var = (grep{!/^[a-z,A-Z]/} @var)[0];
@@ -108,5 +115,15 @@ sub filter {
       }
    }
 };
+=over
+
+=item filter()
+
+metodo new...
+
+=cut
+
+=back
+
 42;
 __END__

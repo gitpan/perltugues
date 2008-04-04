@@ -1,6 +1,15 @@
-package perltugues::texto;
+=head1 NAME
+
+perltugues::caracter - tipo do pragma pertugues
+
+=cut
+
+
+package perltugues::caracter;
 
 use perltugues::tipo;
+
+my $VERSION= 0.1;
 
 use overload 
    "=="  => sub{
@@ -59,14 +68,25 @@ use overload
               },
 ;
 
-@perltugues::texto::ISA = qw/perltugues::tipo/;
-
+@perltugues::caracter::ISA = qw/perltugues::tipo/;
 sub new {
    my $class   = shift;
    my $r = $class->SUPER::new;
    $r->{valor} = 0;
-   $r->{regex} = '^.*?$';
-   $r->{msg}   = 'Não é Texto';
+   $r->{regex} = '^.?$';
+   $r->{msg}   = 'Não é um Caracter';
    bless $r, $class
 }
 42;
+
+=over
+
+=item new()
+
+metodo new...
+
+=cut
+
+=back
+
+

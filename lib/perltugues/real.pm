@@ -1,6 +1,14 @@
+=head1 NAME
+
+perltugues::real - tipo do pragma pertugues
+
+=cut
+
+
 package perltugues::real;
 
 use perltugues::tipo;
+my $VERSION= 0.1;
 
 use overload 
    ">"  => sub{
@@ -41,7 +49,6 @@ use overload
               },
 ;
 @perltugues::real::ISA = qw/perltugues::tipo/;
-
 sub new {
    my $class   = shift;
    my $r = $class->SUPER::new;
@@ -51,3 +58,15 @@ sub new {
    bless $r, $class
 }
 42;
+
+=over
+
+=item new()
+
+metodo new...
+
+=cut
+
+=back
+
+

@@ -1,72 +1,90 @@
-package perltugues::caracter;
+=head1 NAME
+
+perltugues::inteiro - tipo do pragma pertugues
+
+=cut
+
+
+package perltugues::inteiro;
 
 use perltugues::tipo;
+my $VERSION= 0.1;
 
 use overload 
    "=="  => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} eq $o->{valor}
+                    return $r->{valor} == $o->{valor}
                  }else{
-                    return $r->{valor} eq $o
+                    return $r->{valor} == $o
                  }
               },
    "!="  => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} ne $o->{valor}
+                    return $r->{valor} != $o->{valor}
                  }else{
-                    return $r->{valor} ne $o
+                    return $r->{valor} != $o
                  }
               },
    ">"  => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} gt $o->{valor}
+                    return $r->{valor} > $o->{valor}
                  }else{
-                    return $r->{valor} gt $o
+                    return $r->{valor} > $o
                  }
               },
    "<"  => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} lt $o->{valor}
+                    return $r->{valor} < $o->{valor}
                  }else{
-                    return $r->{valor} lt $o
+                    return $r->{valor} < $o
                  }
               },
    ">=" => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} ge $o->{valor}
+                    return $r->{valor} >= $o->{valor}
                  }else{
-                    return $r->{valor} ge $o
+                    return $r->{valor} >= $o
                  }
               },
    "<=" => sub{
                  my $r = shift;
                  my $o = shift;
                  if(ref $o =~ /perltugues::\w+/) {
-                    return $r->{valor} le $o->{valor}
+                    return $r->{valor} <= $o->{valor}
                  }else{
-                    return $r->{valor} le $o
+                    return $r->{valor} <= $o
                  }
               },
 ;
-
-@perltugues::caracter::ISA = qw/perltugues::tipo/;
-
+@perltugues::inteiro::ISA = qw/perltugues::tipo/;
 sub new {
    my $class   = shift;
    my $r = $class->SUPER::new;
    $r->{valor} = 0;
-   $r->{regex} = '^.?$';
-   $r->{msg}   = 'Não é um Caracter';
+   $r->{regex} = '^\d+$';
+   $r->{msg}   = 'Não é Inteiro';
    bless $r, $class
 }
 42;
+
+=over
+
+=item new()
+
+metodo new...
+
+=cut
+
+=back
+
+

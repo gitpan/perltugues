@@ -15,7 +15,7 @@ BEGIN {
    $perltugues::VERSION =  0.0.1;
 }
 
-our $VERSION = '0.1';
+my $VERSION = '0.1';
 
 use Filter::Simple;
 

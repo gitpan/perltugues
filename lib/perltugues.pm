@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use utf8;
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 use Filter::Simple;
 
@@ -255,6 +255,7 @@ Variáveis são declaradas da seguinte forma:
 =head2 Entrada e Saída
 
 =head3 escreve
+
 =head3 escreva
 
 =head3 leia
@@ -271,6 +272,7 @@ Executa o bloco apenas se a expressão fornecida for verdadeira. Note que, em qu
 
 
 =head3 a não ser que
+
 =head3 a nao ser que
 
    TODO
@@ -304,7 +306,9 @@ executará com os valores 1, 3, 5, 7 e 9.
 Executa o bloco enquanto a expressão definida for verdadeira.
 
 =head3 ateh que
+
 =head3 até que
+
 =head3 ate que
 
     ateh que i == j {

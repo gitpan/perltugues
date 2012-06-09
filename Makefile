@@ -58,11 +58,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = perltugues
 NAME_SYM = perltugues
-VERSION = 0.18
+VERSION = 0.19
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_18
+VERSION_SYM = 0_19
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.18
+XS_VERSION = 0.19
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -276,7 +276,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = perltugues
-DISTVNAME = perltugues-0.18
+DISTVNAME = perltugues-0.19
 
 
 # --- MakeMaker macro section:
@@ -507,7 +507,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
 	$(NOECHO) $(ECHO) 'name:               perltugues' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.18' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.19' >> META_new.yml
 	$(NOECHO) $(ECHO) 'abstract:           pragma para programar usando português estruturado' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    - Fernando Correa de Oliveira <fco@cpan.org>' >> META_new.yml
@@ -818,7 +818,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.18">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.19">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>pragma para programar usando português estruturado</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Fernando Correa de Oliveira &lt;fco@cpan.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd

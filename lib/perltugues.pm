@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use utf8;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 use Filter::Simple;
 
@@ -168,7 +168,7 @@ perltugues - pragma para programar usando português estruturado
 
 =head1 VERSION
 
-0.16
+0.19
 
 =head1 SYNOPSIS
 
@@ -328,18 +328,23 @@ produz o mesmo resultado que o exemplo anterior. Para facilitar ainda mais a leg
 Algumas expressões podem ser usadas para controlar o fluxo dos laços. Em casos de laços aninhados, elas serão aplicadas sempre em relação ao laço mais específico. Para tratar laços externos, é possível rotulá-los e referenciar o rótulo. As expressões são:
 
 =head4 saia do laço
+
 =head4 saia do laco
+
 =head4 saia do loop
 
 sai do laço completamente.
 
 =head4 próximo
+
 =head4 proximo
 
 inicia a próxima iteração no laço.
 
 =head4 de novo
+
 =head4 refaça
+
 =head4 refaca
 
 executa novamente o laço, mas sem reavaliar a condição.
@@ -353,6 +358,7 @@ executa novamente o laço, mas sem reavaliar a condição.
 
 
 =head4 vá para ROTULO
+
 =head4 va para ROTULO
 
 posiciona o fluxo do seu código em um local arbitrário do mesmo, definido a partir de um rótulo.

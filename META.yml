@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               perltugues
-version:            0.18
+version:            0.19
 abstract:           pragma para programar usando português estruturado
 author:
     - Fernando Correa de Oliveira <fco@cpan.org>

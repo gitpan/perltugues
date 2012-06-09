@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use utf8;
 
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 use Filter::Simple;
 
@@ -160,6 +160,8 @@ sub filter {
 
 42;
 __END__
+=encoding utf8
+
 =head1 NAME
 
 perltugues - pragma para programar usando português estruturado
